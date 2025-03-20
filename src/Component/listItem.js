@@ -1,10 +1,12 @@
 import React from "react"
+import '../App.css'
 
-function ListItem(props){
+function ListItem({item,onClick}){
     return(
-        <div>
-            {props.item}    
+        <div className="list-item" onClick={onClick}>
+            <span className="item-text">K{item}</span> 
         </div>
+            
     )
 }
 

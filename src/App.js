@@ -8,15 +8,19 @@ function App() {
   const [inputValue,setinputValue]=useState('')
   const [numberList,setNumberList]=useState([])
   const addItem = () =>{
-    setNumberList([...numberList,Number(inputValue)])
+    setNumberList([...numberList,inputValue])
+    setinputValue('')
   }
   const addInput = (e)=>{
     setinputValue(e.target.value)
   }
+  const removeItem = (item)=>{
+    setNumberList(numberList.filter((number)=> number !== item))
+  }
   return (
     <div className="App">
       <Headers />
-      <List numberList={numberList}/>
+      <List numberList={numberList} removeItem={removeItem}/>
       <Footer onClick={addItem} onChange={addInput} inputValue={inputValue}/>
     </div>
   );

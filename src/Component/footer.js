@@ -9,7 +9,7 @@ export default function Footers({onClick, onChange,inputValue}){
         <TextField
           id="outlined-number"
           label="Number"
-          type="number"
+          type="text"
           slotProps={{
             inputLabel: {
               shrink: true,

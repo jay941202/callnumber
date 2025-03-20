@@ -2,7 +2,7 @@ import React from "react";
 
 const backgroundStyle = {
     width: '100%',
-    height: '25vh',
+    height: '20vh',
     backgroundImage: 'url(/background.png)',
     backgroundSize: 'contain',
     backgroundPosition: 'center',
